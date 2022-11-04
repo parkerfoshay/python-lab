@@ -18,13 +18,13 @@ client = MongoClient(MONGODB_URI)
 db = client.sample_supplies
 
 # Get a reference to the 'sales' collection
-accounts_collection = db.sales
+sales_collection = db.sales
 
-# TODO: Create a filter document to find all sales with a store location of 'Austin'
+# TODO: Finish creating the filter document to find all sales with a store location of 'Austin' by replacing the <field> and <value> placeholders
 documents_to_find = {"storeLocation": "Austin"}
 
 # Find documents
-cursor = accounts_collection.find(documents_to_find)
+cursor = sales_collection.find(documents_to_find)
 
 # Print documents
 for document in cursor:
